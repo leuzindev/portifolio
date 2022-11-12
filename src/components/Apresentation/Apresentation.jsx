@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Leonardo_pic from '/public/leonardo_pic.png'
-import Download from '/public/download.png'
-import Github from '/public/github.png'
-import Linkedin from '/public/linkedin_circle.png'
+import Download from '/download.png'
+import Github from '/github.png'
+import Linkedin from '/linkedin_circle.png'
 
 const Screen = styled.div`
     width: 100%;
@@ -20,7 +19,7 @@ const Right_card = styled.div`
 
 const Left_card = styled.div`
     width: 30%;
-    background-image: url(/public/leonardo_pic.png);
+    background-image: url(/leonardo_pic.png);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -51,7 +50,7 @@ const MyName = styled.h1`
 
 const Ocupation_Feed = styled.div`
     
-    height: 81%;
+ 
 `
 
 const Ocupation_area = styled.div`

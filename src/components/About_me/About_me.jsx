@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {Carrosel} from '../Carrosel/Carrosel.jsx'
+import Carrosel from '../Carrosel/Carrosel.jsx'
 
 const Screen = styled.div`
     width: 100%;

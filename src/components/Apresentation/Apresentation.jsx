@@ -18,12 +18,12 @@ const Right_card = styled.div`
 `
 
 const Left_card = styled.div`
-    width: 30%;
+    width: 43%;
     background-image: url(/leonardo_pic.png);
     background-repeat: no-repeat;
     background-size: cover;
     
-`
+    `
 
 const Leonardo_img = styled.img`
 
@@ -175,6 +175,8 @@ const Lbl = styled.h1`
 
 const Block_dw_links = styled.div`
     margin-top: 80px;
+
+    
 `
 export const Apresentation = () => {
     return (

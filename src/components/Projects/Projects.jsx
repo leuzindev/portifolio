@@ -19,6 +19,8 @@ import hzc2 from '/hzc2.png'
 const Screen = styled.div`
     width: 100%;
     height: 100vh;
+    text-align: center;
+    background-color: black;
     
 `
 export const Projects = () => {

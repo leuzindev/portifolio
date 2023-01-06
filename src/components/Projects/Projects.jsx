@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import './Projects.css'
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
 
 import lorem1 from '/lorem1.png'
 import lorem2 from '/lorem2.png'
@@ -32,6 +31,12 @@ const Screen = styled.div`
     text-align: center;
     background-color: black;
     
+    
+    
+`
+
+const ProjImgs = styled.img`
+  height: 95vh;
 `
 export const Projects = () => {
   return (
@@ -51,41 +56,28 @@ export const Projects = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={connect1} />
+          <ProjImgs src={connect1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={connect2} />
+          <ProjImgs src={connect2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={connect3} />
+          <ProjImgs src={connect3} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={hzc1} />
+          <ProjImgs src={hzc1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={hzc2} />
+          <ProjImgs src={hzc2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={lorem1} />
+          <ProjImgs src={lorem1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={lorem2} />
+          <ProjImgs src={lorem2} />
         </SwiperSlide>
       </Swiper>
-      {/* <Swiper navigation={true} 
-        modules={[Navigation]} 
-        loop={true}
-        
-        className="mySwiper carrosel-swiper">
-        <SwiperSlide><img src={lorem1} /></SwiperSlide>
-        <SwiperSlide><img src={lorem2} /></SwiperSlide>
-        <SwiperSlide><img src={connect1} /></SwiperSlide>
-        <SwiperSlide><img src={connect2} /></SwiperSlide>
-        <SwiperSlide><img src={connect3} /></SwiperSlide>
-        <SwiperSlide><img src={hzc1} /></SwiperSlide>
-        <SwiperSlide><img src={hzc2} /></SwiperSlide>
-        
-      </Swiper> */}
+      
     </Screen>
   )
 }

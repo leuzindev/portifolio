@@ -1,0 +1,16 @@
+.about{
+
+    color: #FF0000;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 100px;
+    text-align: end;
+    width: 85%;
+}
+
+.title{
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    font-size: 65px;
+    text-align: center;
+    margin-top: 50px;
+}

@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import Carrosel from '../Carrosel/Carrosel.jsx'
+import 'animate.css';
+import './about.css'
+
 
 const Screen = styled.div`
     width: 100%;
@@ -29,21 +32,11 @@ const Area_me = styled.div`
 `
 
 const About = styled.h1`
-  color: #FF0000;
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 100px;
-  text-align: end;
-  width: 85%;
+
 
 `
 
-const Title = styled.h1`
-  font-family: 'Lexend Deca', sans-serif;
-  color: white;
-  font-size: 65px;
-  text-align: center;
-  margin-top: 50px;
-`
+
 const Block_Carrosel = styled.div`
 
   height: 41%;
@@ -65,8 +58,28 @@ const Swiper_btn_prev = styled.div`
 const Swiper_btn_pagination = styled.div`
   
 `
-export const About_me = () => {
 
+export const About_me = () => {
+  useEffect(() => {
+    const aboutMeElement = document.querySelector('.about');
+    const titleElement = document.querySelector('.title');
+
+    function handleScroll() {
+      if (aboutMeElement.scrollIntoView) {
+        aboutMeElement.classList.add('animate__animated', 'animate__bounceInRight');
+      }
+
+      if (titleElement.scrollIntoView) {
+        titleElement.classList.add('animate__animated', 'animate__flipInX');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <Screen>
@@ -75,11 +88,11 @@ export const About_me = () => {
           My name is Leonardo Soares, I am 19 <br />years and i am a Systems Analysis and<br /> Development student at University<br /> Paulista.
         </Me>
       </Area_me>
-      <About>About me</About>
-      <Title>Technologies</Title>
+      <h1 className='about'>About me</h1>
+      <h1 className='title'>Technologies</h1>
       <Block_Carrosel>
-        <Carrosel/>
+        <Carrosel />
       </Block_Carrosel>
     </Screen>
-  )
+  );
 }

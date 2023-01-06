@@ -1,0 +1,28 @@
+.slide-right {
+    color: white;
+    font-family: 'Krub', sans-serif;
+    font-size: 51px;
+  
+    
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation: slide-right .5s cubic-bezier(.25, .46, .45, .94) both
+}
+.text-focus-in{animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-500px)
+    }
+
+    100% {
+        transform: translateX(25px)
+    }
+}
+
+.Area{
+    overflow: hidden;
+    
+    width: 40%;
+}

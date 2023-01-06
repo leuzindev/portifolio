@@ -24,6 +24,7 @@ import prisma from '/prisma.png'
 import figma from '/figma.png'
 
 
+
 class Carrosel extends Component{
   state = {
     activeSlideIndex: 0,
@@ -90,7 +91,6 @@ class Carrosel extends Component{
     );
   }
 }
-
-
-
 export default Carrosel;
+
+

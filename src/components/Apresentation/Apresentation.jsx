@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import './animation.css'
+
 import Download from '/download.png'
 import Github from '/github.png'
 import Linkedin from '/linkedin_circle.png'
+
+import Logo_leuzin from '/logo_leuzin.png'
 
 const Screen = styled.div`
     width: 100%;
@@ -30,9 +34,11 @@ const Leonardo_img = styled.img`
 `
 
 const Side_name_area = styled.div`
+
+   overflow: hidden;
     height: 200px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 `
 
@@ -80,9 +86,13 @@ const Name = styled.div`
     line-height: 60px;
 `
 
-const Button_Project = styled.button`
+const Button_Project = styled.a`
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
-    height: 55px;
+    height: 50px;
     border-radius: 33px;
     border: 2px solid white;
     background-color: transparent;
@@ -178,6 +188,25 @@ const Block_dw_links = styled.div`
 
     
 `
+const AreaLogo = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    height: 100%;
+    width: 50%;
+`
+const LogoLeuzindev = styled.img`
+    margin-right: 20px;
+`
+
+const Stick = styled.img`
+
+    
+    background-color: white;
+    width: 2px;
+    height: 70px;
+`
 export const Apresentation = () => {
     return (
         <Screen>
@@ -186,7 +215,13 @@ export const Apresentation = () => {
             </Left_card>
             <Right_card>
                 <Side_name_area>
-                    <MyName>Leonardo Soares</MyName>
+                    <Stick></Stick>
+                    <div className='Area'>
+                        <p className='slide-right'>Leonardo Soares</p>
+                    </div>
+                    <AreaLogo>
+                        <LogoLeuzindev src={Logo_leuzin}/>
+                    </AreaLogo>
                 </Side_name_area>
                 <Ocupation_Feed>
                     <Ocupation_area>
@@ -197,7 +232,7 @@ export const Apresentation = () => {
                             <Name_Ocupation>in Brazil.</Name_Ocupation>
                         </Name>
                         <Area_Button>
-                            <Button_Project>Projects</Button_Project>
+                            <Button_Project href='#projects'>Projects</Button_Project>
                         </Area_Button>
 
                     </Ocupation_area>

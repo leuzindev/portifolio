@@ -222,6 +222,10 @@ const Stick = styled.img`
     background-color: white;
     width: 2px;
     height: 70px;
+    @media (max-width: 1400px) {
+        height: 50px;
+   
+  }
 `
 export const Apresentation = () => {
     return (

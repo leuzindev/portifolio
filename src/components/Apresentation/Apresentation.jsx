@@ -72,7 +72,7 @@ const Name_Ocupation = styled.h1`
     color: white;
     font-size: 51px;
     @media (max-width: 1400px) {
-    font-size: 34px;
+    font-size: 30px;
    
   }
 `
@@ -83,7 +83,7 @@ const Name_Ocupation_Red = styled.h1`
     color: #FF0000;
     font-size: 51px;
     @media (max-width: 1400px) {
-    font-size: 34px;
+    font-size: 30px;
    
   }
     

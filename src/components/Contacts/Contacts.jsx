@@ -58,7 +58,6 @@ const CorpoContato = styled.div`
 
  
 `
-
 const LblContacts = styled.p`
   text-align: center;
   color: white;
@@ -66,7 +65,7 @@ const LblContacts = styled.p`
   font-family: 'JetBrains Mono';
   padding-bottom: 10px;
   font-size: 22pt;
-  width: 75%;
+  width: 100%;
   transition: 1s all;
   &:hover{
     transition: 1s all;

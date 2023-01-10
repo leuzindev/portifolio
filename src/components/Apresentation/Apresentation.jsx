@@ -108,7 +108,7 @@ const Button_Project = styled.a`
     }
 `
 const Area_Button = styled.div`
-    margin-top: 50px;
+    
     display: flex;
     justify-content: end;
     margin-right: 70px;
@@ -184,7 +184,7 @@ const Lbl = styled.h1`
 `
 
 const Block_dw_links = styled.div`
-    margin-top: 80px;
+    
 
     
 `

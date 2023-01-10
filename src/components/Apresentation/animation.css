@@ -10,13 +10,7 @@
     animation: slide-right .5s cubic-bezier(.25, .46, .45, .94) both
 }
 .text-focus-in{animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
-@media (max-width: 1400px) {
-    .slide-right {
-        margin-top: 10px;
 
-    }
-
-}
 
 @keyframes slide-right {
     0% {
@@ -32,4 +26,17 @@
     overflow: hidden;
     
     width: 41%;
+}
+
+@media (max-width: 1400px) {
+    .slide-right {
+        font-size: 29px;
+
+    }
+    .Area{
+        overflow: hidden;
+        
+        width: 43%;
+    }
+
 }

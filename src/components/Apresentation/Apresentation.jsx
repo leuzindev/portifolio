@@ -71,6 +71,10 @@ const Name_Ocupation = styled.h1`
     font-family: 'Lexend Deca', sans-serif;
     color: white;
     font-size: 51px;
+    @media (max-width: 1400px) {
+    font-size: 34px;
+   
+  }
 `
 
 const Name_Ocupation_Red = styled.h1`
@@ -78,12 +82,19 @@ const Name_Ocupation_Red = styled.h1`
     text-align: end;
     color: #FF0000;
     font-size: 51px;
+    @media (max-width: 1400px) {
+    font-size: 34px;
+   
+  }
     
 `
 
 const Name = styled.div`
     margin-right: 70px;
     line-height: 60px;
+    @media (max-width: 1400px) {
+        line-height: 40px; 
+  }
 `
 
 const Button_Project = styled.a`

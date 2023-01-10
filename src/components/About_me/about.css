@@ -17,11 +17,11 @@
 
 @media (max-width: 1400px) {
     .about{
-        font-size: 70px;
+        font-size: 60px;
         margin-bottom: 10px;
     }
     .title{
         
-        margin: 0px !important;
+        margin-top: 1px;
     }
   }

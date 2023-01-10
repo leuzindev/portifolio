@@ -18,6 +18,10 @@
 @media (max-width: 1400px) {
     .about{
         font-size: 70px;
+        margin-bottom: 10px;
     }
-
+    .title{
+        
+        margin-top: 0px;
+    }
   }

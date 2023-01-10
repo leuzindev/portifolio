@@ -112,11 +112,16 @@ const Button_Project = styled.a`
     font-size: 25px;
     transition: 1s all;
     cursor: pointer;
+    margin-top: 20px;
     &:hover{
         transition: 1s all;
         background-color: white;
         color: black;
     }
+     @media (max-width: 1400px) {
+        margin-top: 10px;
+   
+  }
 `
 const Area_Button = styled.div`
     

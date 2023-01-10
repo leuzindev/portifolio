@@ -35,8 +35,8 @@ const Leonardo_img = styled.img`
 
 const Side_name_area = styled.div`
 
-   overflow: hidden;
-    height: 200px;
+    overflow: hidden;
+    height: 25%;
     display: flex;
     justify-content: center;
     align-items: center;

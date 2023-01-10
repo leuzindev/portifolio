@@ -17,6 +17,11 @@ const Me = styled.h1`
   font-family: 'Lexend Deca', sans-serif;
   font-size: 45px;
   line-height: 60px;
+  @media (max-width: 1400px) {
+    font-size: 30px;
+    line-height: 43px;
+
+  }
 `
 
 const Area_me = styled.div`

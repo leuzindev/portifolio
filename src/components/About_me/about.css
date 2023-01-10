@@ -14,3 +14,10 @@
     text-align: center;
     margin-top: 50px;
 }
+
+@media (max-width: 1400px) {
+    .about{
+        font-size: 70px;
+    }
+
+  }

@@ -64,6 +64,9 @@ const Tech_figma = styled.img`
 const ProjImgs = styled.img`
   max-width: 85%;
   max-height: 100%;
+  @media (max-width: 1400px) {
+    max-width: 70%;
+}
 
 `
 
@@ -108,7 +111,9 @@ const Infos = styled.li`
   color: white;
   font-family: 'JetBrains Mono';
   margin: 5px;
-  
+  @media (max-width: 1400px) {
+    font-size: 12pt;
+}
 `
 
 const Bloco_titulo = styled.div`

@@ -65,7 +65,9 @@ const Logo_home = styled.img`
 const Arrow = styled.img`
     
 `
-
+const Link = styled.a`
+  text-decoration: none;
+`
 
 
 export const Home = () => {
@@ -79,10 +81,14 @@ export const Home = () => {
         
         <Hi>developer & UI design.</Hi>
       </AreaTexto>
+      <Link href="#apresentation">
+
+    
       <AreaSee>
         <See>See more about me</See>
         <Arrow src={setaHome} />
       </AreaSee>
+      </Link>
     </Screen>
   )
 }

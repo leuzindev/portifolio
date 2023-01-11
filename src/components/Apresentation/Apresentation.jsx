@@ -229,7 +229,7 @@ const Stick = styled.img`
 `
 export const Apresentation = () => {
     return (
-        <Screen>
+        <Screen id='apresentation'>
             <Left_card>
 
             </Left_card>

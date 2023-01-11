@@ -29,55 +29,81 @@ const Screen = styled.div`
     width: 100%;
     height: 100vh;
     text-align: center;
-    background-color: black;
+    background-image: url('/bg_project.png'); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     
     
     
+`
+const AreaSwiper = styled.div`
+
+  height: 60%;
+`
+
+const AreaDescricao = styled.div`
+  background-color: blue;
+  height: 40%;
 `
 
 const ProjImgs = styled.img`
-  height: 95vh;
+  max-width: 60%;
+  max-height: 100%;
+
 `
+
+
+
 export const Projects = () => {
   return (
     <Screen id='projects'>
+      <AreaSwiper>
 
-      <Swiper
-        effect={"cube"}
-        grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
-        pagination={true}
-        modules={[EffectCube, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <ProjImgs src={connect1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjImgs src={connect2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjImgs src={connect3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjImgs src={hzc1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjImgs src={hzc2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjImgs src={lorem1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProjImgs src={lorem2} />
-        </SwiperSlide>
-      </Swiper>
-      
+        <Swiper
+
+          effect={"cube"}
+          grabCursor={true}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
+          pagination={true}
+          modules={[EffectCube, Pagination]}
+          className="mySwiper"
+        >
+          <SwiperSlide >
+            <ProjImgs src={connect1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjImgs src={connect2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjImgs src={connect3} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjImgs src={hzc1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjImgs src={hzc2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjImgs src={lorem1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProjImgs src={lorem2} />
+          </SwiperSlide>
+        </Swiper>
+
+
+
+      </AreaSwiper>
+      <AreaDescricao>
+        s
+      </AreaDescricao>
     </Screen>
   )
 }

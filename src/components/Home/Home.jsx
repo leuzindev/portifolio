@@ -42,6 +42,11 @@ const Hi = styled.h1`
     font-family: 'Fonthome';
     color: white;
     font-size: 35pt;
+    margin: 5px;
+    @media (max-width: 1400px) {
+      font-size: 23pt;
+
+  }
 
 `
 const See = styled.p`
@@ -51,7 +56,10 @@ const See = styled.p`
     margin: 15px;
 `
 const Logo_home = styled.img`
-    
+  @media (max-width: 1400px) {
+    width: 10%;
+
+  }
 `
 const Arrow = styled.img`
     

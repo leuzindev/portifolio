@@ -49,6 +49,9 @@ const Titulo = styled.h1`
   font-family: 'MuseoModerno';
   color: white;
   font-size: 72pt;
+  @media (max-width: 1400px) {
+    margin-bottom: 50px;
+}
   
 `
 const CorpoContato = styled.div`

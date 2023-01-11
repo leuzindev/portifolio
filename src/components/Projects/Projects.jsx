@@ -54,7 +54,7 @@ const Tech = styled.img`
 const Tech_figma = styled.img`
   margin: 10px;
   @media (max-width: 1400px) {
-      width: 70;
+      width: 70px;
 }
 
 `

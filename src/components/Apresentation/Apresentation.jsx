@@ -1,8 +1,7 @@
-import React from 'react'
+import React,{ useState, useEffect }from 'react'
 import styled from 'styled-components'
-
+import { Waypoint } from 'react-waypoint';
 import './animation.css'
-
 import Download from '/download.png'
 import Github from '/github.png'
 import Linkedin from '/linkedin_circle.png'
@@ -228,17 +227,24 @@ const Stick = styled.img`
   }
 `
 export const Apresentation = () => {
+
+
+
+    const [animationDone, setAnimationDone] = useState(false);
+    
+      
+
     return (
         <Screen id='apresentation'>
             <Left_card>
 
             </Left_card>
             <Right_card>
+            
                 <Side_name_area>
                     <Stick></Stick>
                     <div className='Area'>
-                        <p className='slide-right'>Leonardo Soares</p>
-                    </div>
+                    <p className={`slide-right initial ${animationDone ? 'animation-done' : ''}`}>Leonardo Soares</p>                    </div>
                     <AreaLogo>
                         <LogoLeuzindev src={Logo_leuzin}/>
                     </AreaLogo>
@@ -246,6 +252,7 @@ export const Apresentation = () => {
                 <Ocupation_Feed>
                     <Ocupation_area>
                         <Name>
+                            
                             <Name_Ocupation_Red>Back-end & Front-end</Name_Ocupation_Red>
                             <Name_Ocupation_Red>Developer</Name_Ocupation_Red>
                             <Name_Ocupation>Freelancer, located</Name_Ocupation>
@@ -274,7 +281,11 @@ export const Apresentation = () => {
                         </Area_Redes>
                     </Block_dw_links>
                 </Ocupation_Feed>
-
+                <Waypoint
+                    onEnter={() => {
+                        setAnimationDone(true);
+                    }}
+                />
             </Right_card>
         </Screen>
     )

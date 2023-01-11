@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import './font.css'
 import logoHome from '/logo_home.png'
 import setaHome from '/seta_home.png'
+import Typical from 'react-typical'
+
+
 
 
 const Screen = styled.div`
@@ -68,27 +71,51 @@ const Arrow = styled.img`
 const Link = styled.a`
   text-decoration: none;
 `
-
+const Hi_sub = styled.h2`
+    font-family: 'Fonthome';
+    color: white;
+    font-size: 10pt;
+    margin-top: 5px;
+    margin-left: 3px;
+    
+   
+`
 
 export const Home = () => {
+
+
   return (
     <Screen>
       <AreaLogo>
         <Logo_home src={logoHome} />
       </AreaLogo>
       <AreaTexto>
-        <Hi>Hi, I'm Leo. I'm a Full-Stack</Hi>
-        
-        <Hi>developer & UI design.</Hi>
-      </AreaTexto>
-      <Link href="#apresentation">
+     
+          <Hi>Hi, I'm Leo. I'm a Full-Stack</Hi>
+          <Hi>developer & UI designer.</Hi>
+        <div style={{ display: "flex" }}>
+         <Hi_sub>you can tell me about</Hi_sub> 
+         <Hi_sub>
+         <Typical
+                loop={Infinity}
+                steps={[
+                'React',2000,'Python',1000,
+                'Django',500
+                ]}
+              />
+        </Hi_sub>
+              
+            
 
-    
-      <AreaSee>
-        <See>See more about me</See>
-        <Arrow src={setaHome} />
-      </AreaSee>
+        </div>
+      </AreaTexto>
+
+      <Link href="#apresentation">
+        <AreaSee>
+          <See>See more about me</See>
+          <Arrow src={setaHome} />
+        </AreaSee>
       </Link>
     </Screen>
-  )
+  );
 }

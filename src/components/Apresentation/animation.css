@@ -2,13 +2,19 @@
     color: white;
     font-family: 'Krub', sans-serif;
     font-size: 51px;
-  
-    
     overflow: hidden;
     padding-top: 10px;
     padding-bottom: 10px;
-    animation: slide-right .5s cubic-bezier(.25, .46, .45, .94) both
+ 
 }
+.slide-right.initial {
+    visibility: hidden;
+}
+.slide-right.animation-done {
+    animation: slide-right .5s cubic-bezier(.25, .46, .45, .94) both;
+    visibility: visible;
+}
+
 .text-focus-in{animation:text-focus-in 1s cubic-bezier(.55,.085,.68,.53) both}
 
 
@@ -28,6 +34,23 @@
     width: 41%;
 }
 
+
+.typing-bar {
+    width: 30px;
+    height: 3px;
+    background-color: #666;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: typing 1s infinite;
+  }
+  
+  @keyframes typing {
+    0% { width: 0; }
+    50% { width: 30px; }
+    100% { width: 0; }
+  }
+  
 @media (max-width: 1400px) {
     .slide-right {
         font-size: 29px;

@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react'
 import styled from 'styled-components'
 
 import { Swiper, SwiperSlide } from "swiper/react";
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -40,7 +42,12 @@ import prisma from '/prisma.png'
 import figma from '/figma.png'
 
 
+
 const Tech = styled.img`
+  margin: 10px;
+  @media (max-width: 1400px) {
+      width: 120px;
+}
 
 `
 
@@ -49,8 +56,7 @@ const ProjImgs = styled.img`
   max-height: 100%;
 
 `
-// import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+
 
 
 const Screen = styled.div`
@@ -87,10 +93,12 @@ const NomeProjeto = styled.h1`
   color: white;
 `
 
-const Infos = styled.p`
+const Infos = styled.li`
   font-size: 15pt;
   color: white;
   font-family: 'JetBrains Mono';
+  margin: 5px;
+  
 `
 
 const Bloco_titulo = styled.div`
@@ -101,12 +109,13 @@ const Bloco_titulo = styled.div`
   height: 20%;
 `
 const Bloco_info = styled.div`
-  
+ 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  height: 50%;
+  height: 100%;
 `
 const ContainerInfo = styled.div`
   
@@ -118,14 +127,21 @@ const ContainerInfo = styled.div`
 `
 
 const Bloco_tech = styled.div`
-  background-color: gold;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
   height: 100%;
 `
-
+const Container_desc = styled.div`
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 50%;
+`
 export const Projects = () => {
 
   const [currentImage, setCurrentImage] = useState(1);
@@ -185,17 +201,20 @@ export const Projects = () => {
             </Bloco_titulo>
             <ContainerInfo>
               <Bloco_info>
+                <Container_desc>
                 <Infos>Um Banco digital focado na experiência do usuário</Infos>
                 <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
                 <Infos>Sitesma de Login com JWT</Infos>
                 <Infos>Hash de senha de usuário</Infos>
                 <Infos>Rotas protegidas</Infos>
+                </Container_desc>
               </Bloco_info>
               <Bloco_tech>
                 <Tech src={python}/>
                 <Tech src={reactjs}/>
                 <Tech src={mysql}/>
-                <Tech src={figma}/>
+                <Tech src={django}/>
+                
               </Bloco_tech>
 
             </ContainerInfo>
@@ -206,25 +225,44 @@ export const Projects = () => {
              <Bloco_titulo>
             <NomeProjeto>Hzc App</NomeProjeto>
              </Bloco_titulo>
+             <ContainerInfo>
              <Bloco_info>
+              <Container_desc>
               <Infos>Uma página sobre skate</Infos>
               <Infos>Flex box e Grid layout</Infos>
               <Infos>Mobile first</Infos>
-              
+              </Container_desc>
             </Bloco_info>
+            <Bloco_tech>
+            <Tech src={html}/>
+              <Tech src={css}/>
+              <Tech src={javascript}/>
+              <Tech src={figma}/>
+            </Bloco_tech>
+
+            </ContainerInfo>
           </AreaInfo>
         )}
         {(currentImage === 5 || currentImage === 6) && (
           <AreaInfo id='lorem-info'>
              <Bloco_titulo>
             <NomeProjeto>Lorem Barber</NomeProjeto>
-
              </Bloco_titulo>
+             <ContainerInfo>
              <Bloco_info>
+             <Container_desc>
               <Infos>Um site para uma Barbearia moderna</Infos>
               <Infos>Carrosel de Imagens</Infos>
-              
+              </Container_desc>
             </Bloco_info>
+            <Bloco_tech>
+              <Tech src={reactjs}/>
+              <Tech src={figma}/>
+              <Tech src={javascript}/>
+              
+        
+            </Bloco_tech>
+            </ContainerInfo>
           </AreaInfo>
         )}
       </AreaDesc>

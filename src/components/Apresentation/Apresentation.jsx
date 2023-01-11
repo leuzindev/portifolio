@@ -18,6 +18,7 @@ const Screen = styled.div`
 const Right_card = styled.div`
     background-color: #000000;
     width: 70%;
+    
   
 `
 
@@ -26,9 +27,8 @@ const Left_card = styled.div`
     background-image: url(/leonardo_pic.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    `
 
+    `
 const Leonardo_img = styled.img`
 
 `

@@ -40,13 +40,17 @@ import prisma from '/prisma.png'
 import figma from '/figma.png'
 
 
+const Tech = styled.img`
+
+`
+
 const ProjImgs = styled.img`
   max-width: 85%;
   max-height: 100%;
 
 `
 // import required modules
-import {  EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination } from "swiper";
 
 
 const Screen = styled.div`
@@ -71,8 +75,8 @@ const AreaInfo = styled.div`
   height: 100%;
   width: 50%;
   display: flex;
-  justify-content:  flex-start;
-  align-items: flex-start;
+
+  align-items: center;
   flex-direction: column;
 `
 
@@ -88,6 +92,24 @@ const Infos = styled.p`
   color: white;
   font-family: 'JetBrains Mono';
 `
+
+const Bloco_titulo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  height: 20%;
+`
+const Bloco_info = styled.div`
+  background-color: green;
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  height: 50%;
+`
+
 export const Projects = () => {
 
   const [currentImage, setCurrentImage] = useState(1);
@@ -140,25 +162,44 @@ export const Projects = () => {
 
       </Swiper>
       <AreaDesc>
-        {currentImage < 3  && (
+        {currentImage < 3 && (
           <AreaInfo id='connect-info'>
-            <NomeProjeto>Connect Bank</NomeProjeto>
-            <Infos>Um Banco digital focado na experiência do usuário</Infos>
-            <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
+            <Bloco_titulo>
+              <NomeProjeto>Connect Bank</NomeProjeto>
+            </Bloco_titulo>
+            <Bloco_info>
+              <Infos>Um Banco digital focado na experiência do usuário</Infos>
+              <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
+              <Infos>Sitesma de Login com JWT</Infos>
+              <Infos>Hash de senha de usuário</Infos>
+              <Infos>Rotas protegidas</Infos>
+            </Bloco_info>
           </AreaInfo>
         )}
         {(currentImage === 3 || currentImage === 4) && (
           <AreaInfo id='hzc-info'>
+             <Bloco_titulo>
             <NomeProjeto>Hzc App</NomeProjeto>
-            <Infos>Um site para skatistas</Infos>
-            <Infos>Flex box e grid layout</Infos>
+             </Bloco_titulo>
+             <Bloco_info>
+              <Infos>Uma página sobre skate</Infos>
+              <Infos>Flex box e Grid layout</Infos>
+              <Infos>Mobile first</Infos>
+              
+            </Bloco_info>
           </AreaInfo>
         )}
         {(currentImage === 5 || currentImage === 6) && (
           <AreaInfo id='lorem-info'>
+             <Bloco_titulo>
             <NomeProjeto>Lorem Barber</NomeProjeto>
-            <Infos>Um site para uma barbearia moderna</Infos>
-            <Infos>Reactjs e carrosel de imgs</Infos>
+
+             </Bloco_titulo>
+             <Bloco_info>
+              <Infos>Um site para uma Barbearia moderna</Infos>
+              <Infos>Carrosel de Imagens</Infos>
+              
+            </Bloco_info>
           </AreaInfo>
         )}
       </AreaDesc>

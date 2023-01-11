@@ -65,15 +65,15 @@ const Screen = styled.div`
     
 `
 const AreaDesc = styled.div`
-  background-color: red;
+
   height: 30%;
   width: 100%;
 `
 
 const AreaInfo = styled.div`
-  background-color: blue;
+  
   height: 100%;
-  width: 50%;
+  width: 100%;
   display: flex;
 
   align-items: center;
@@ -101,13 +101,29 @@ const Bloco_titulo = styled.div`
   height: 20%;
 `
 const Bloco_info = styled.div`
-  background-color: green;
+  
   display: flex;
-
   flex-direction: column;
   align-items: flex-start;
-  width: 70%;
+  width: 50%;
   height: 50%;
+`
+const ContainerInfo = styled.div`
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const Bloco_tech = styled.div`
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
 `
 
 export const Projects = () => {
@@ -167,13 +183,22 @@ export const Projects = () => {
             <Bloco_titulo>
               <NomeProjeto>Connect Bank</NomeProjeto>
             </Bloco_titulo>
-            <Bloco_info>
-              <Infos>Um Banco digital focado na experiência do usuário</Infos>
-              <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
-              <Infos>Sitesma de Login com JWT</Infos>
-              <Infos>Hash de senha de usuário</Infos>
-              <Infos>Rotas protegidas</Infos>
-            </Bloco_info>
+            <ContainerInfo>
+              <Bloco_info>
+                <Infos>Um Banco digital focado na experiência do usuário</Infos>
+                <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
+                <Infos>Sitesma de Login com JWT</Infos>
+                <Infos>Hash de senha de usuário</Infos>
+                <Infos>Rotas protegidas</Infos>
+              </Bloco_info>
+              <Bloco_tech>
+                <Tech src={python}/>
+                <Tech src={reactjs}/>
+                <Tech src={mysql}/>
+                <Tech src={figma}/>
+              </Bloco_tech>
+
+            </ContainerInfo>
           </AreaInfo>
         )}
         {(currentImage === 3 || currentImage === 4) && (

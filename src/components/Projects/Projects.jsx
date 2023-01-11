@@ -51,6 +51,16 @@ const Tech = styled.img`
 
 `
 
+const Tech_figma = styled.img`
+  margin: 10px;
+  @media (max-width: 1400px) {
+      width: 70;
+}
+
+`
+
+
+
 const ProjImgs = styled.img`
   max-width: 85%;
   max-height: 100%;
@@ -237,7 +247,7 @@ export const Projects = () => {
             <Tech src={html}/>
               <Tech src={css}/>
               <Tech src={javascript}/>
-              <Tech src={figma}/>
+              <Tech_figma src={figma}/>
             </Bloco_tech>
 
             </ContainerInfo>
@@ -257,7 +267,7 @@ export const Projects = () => {
             </Bloco_info>
             <Bloco_tech>
               <Tech src={reactjs}/>
-              <Tech src={figma}/>
+              <Tech_figma src={figma}/>
               <Tech src={javascript}/>
               
         

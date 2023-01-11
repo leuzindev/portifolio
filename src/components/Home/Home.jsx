@@ -10,8 +10,9 @@ const Screen = styled.div`
     height: 100vh;
     background-image: url('/bg_home.png');
     background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-   
+    background-attachment: fixed;
 `
 
 const AreaSee = styled.div`

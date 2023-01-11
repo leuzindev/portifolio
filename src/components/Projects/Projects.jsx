@@ -219,7 +219,7 @@ export const Projects = () => {
                 <Container_desc>
                 <Infos>Um Banco digital focado na experiência do usuário</Infos>
                 <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
-                <Infos>Sitesma de Login com JWT</Infos>
+                <Infos>Sistema de Login com JWT</Infos>
                 <Infos>Hash de senha de usuário</Infos>
                 <Infos>Rotas protegidas</Infos>
                 </Container_desc>
@@ -245,6 +245,7 @@ export const Projects = () => {
               <Container_desc>
               <Infos>Uma página sobre skate</Infos>
               <Infos>Flex box e Grid layout</Infos>
+              <Infos>Responsívo</Infos>
               <Infos>Mobile first</Infos>
               </Container_desc>
             </Bloco_info>
@@ -268,6 +269,8 @@ export const Projects = () => {
              <Container_desc>
               <Infos>Um site para uma Barbearia moderna</Infos>
               <Infos>Carrosel de Imagens</Infos>
+              <Infos>Styled Components</Infos>
+              <Infos>Prototipado no figma</Infos>
               </Container_desc>
             </Bloco_info>
             <Bloco_tech>

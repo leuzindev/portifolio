@@ -64,3 +64,17 @@
 
 }
 
+@media (max-width: 900px) {
+    .slide-right {
+        font-size: 20px;
+        padding: 0px;
+    
+    }
+    
+    .Area{
+    
+        
+        width: 50%;
+    }
+   
+}

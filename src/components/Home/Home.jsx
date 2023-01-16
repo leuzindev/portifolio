@@ -32,6 +32,7 @@ const AreaLogo = styled.div`
     display:flex;
     justify-content: center ;
     align-items: center;
+    
 `
 const AreaTexto = styled.div`
 
@@ -51,6 +52,10 @@ const Hi = styled.h1`
       font-size: 23pt;
 
   }
+  @media (max-width: 900px) {
+        font-size: 16pt;
+    
+    }
 
 `
 const See = styled.p`
@@ -58,15 +63,26 @@ const See = styled.p`
     color: white;
     font-size: 15pt;
     margin: 15px;
+    @media (max-width: 900px) {
+        font-size: 15pt;
+    
+    }
 `
 const Logo_home = styled.img`
   @media (max-width: 1400px) {
     width: 10%;
 
   }
+  @media (max-width: 900px) {
+        width: 20%;
+    
+    }
 `
 const Arrow = styled.img`
+    @media (max-width: 900px) {
+        width: 25px;
     
+    }
 `
 const Link = styled.a`
   text-decoration: none;
@@ -94,7 +110,7 @@ export const Home = () => {
           <Hi>Hi, I'm Leo. I'm a Full-Stack</Hi>
           <Hi>developer & UI designer.</Hi>
         <div style={{ display: "flex" }}>
-         <Hi_sub>you can tell me about</Hi_sub> 
+        <Hi_sub>you can tell me about</Hi_sub> 
          <Hi_sub>
          <Typical
                 loop={Infinity}
@@ -103,7 +119,7 @@ export const Home = () => {
                 'Django',500
                 ]}
               />
-        </Hi_sub>
+        </Hi_sub> 
               
             
 

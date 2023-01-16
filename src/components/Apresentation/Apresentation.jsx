@@ -12,12 +12,21 @@ const Screen = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
+    @media (max-width: 900px) {
+        flex-direction: column;
+   
+  }
+    
 `
 
 const Right_card = styled.div`
     background-color: #000000;
     width: 70%;
-    
+    @media (max-width: 900px) {
+    height: 70%;
+    width: 100%;
+   
+  }
   
 `
 
@@ -26,7 +35,14 @@ const Left_card = styled.div`
     background-image: url(/leonardo_pic.png);
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-position: center;
+    @media (max-width: 900px) {
+    height: 30%;
+    width: 100%;
+    background-position-y: -70px;
+   
+  }
+ 
     `
 const Leonardo_img = styled.img`
 
@@ -54,7 +70,10 @@ const MyName = styled.h1`
 `
 
 const Ocupation_Feed = styled.div`
-    
+     @media (max-width: 900px) {
+       
+   
+  }
  
 `
 
@@ -74,6 +93,12 @@ const Name_Ocupation = styled.h1`
     font-size: 30px;
    
   }
+  @media (max-width: 900px) {
+    font-size: 20px;
+    text-align: start;
+    margin-left: 10px;
+   
+  }
 `
 
 const Name_Ocupation_Red = styled.h1`
@@ -85,6 +110,12 @@ const Name_Ocupation_Red = styled.h1`
     font-size: 30px;
    
   }
+  @media (max-width: 900px) {
+    font-size: 20px;
+    text-align: start;
+    margin-left: 10px;
+  }
+  
     
 `
 
@@ -93,7 +124,8 @@ const Name = styled.div`
     line-height: 60px;
     @media (max-width: 1400px) {
         line-height: 40px; 
-  }
+    }
+   
 `
 
 const Button_Project = styled.a`
@@ -121,12 +153,21 @@ const Button_Project = styled.a`
         margin-top: 10px;
    
   }
+  @media (max-width: 900px) {
+        width: 200px
+   
+  }
+
 `
 const Area_Button = styled.div`
     
     display: flex;
     justify-content: end;
     margin-right: 70px;
+    @media (max-width: 900px) {
+        display: none;
+   
+  }
 `
 
 const Download_area = styled.div`
@@ -135,6 +176,7 @@ const Download_area = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+   
 `
 
 const Button_Download = styled.button`
@@ -154,6 +196,12 @@ const Button_Download = styled.button`
         transition: 1s all;
         border: 2px solid #FF0000;
     }
+    @media (max-width: 900px) {
+        width: 300px;
+        font-size: 20px;
+   
+  }
+    
 `
 
 const Icon_baixar = styled.img`
@@ -189,6 +237,10 @@ const Redes = styled.div`
         border-bottom: 2px solid #FF0000;
         
     }
+    @media (max-width: 900px) {
+       margin: 10px;
+   
+  }
 `
 
 const Lbl = styled.h1`
@@ -210,9 +262,15 @@ const AreaLogo = styled.div`
     
     height: 100%;
     width: 50%;
+
+   
 `
 const LogoLeuzindev = styled.img`
     margin-right: 20px;
+    @media (max-width: 900px) {
+    width: 30%;
+   
+}
 `
 
 const Stick = styled.img`

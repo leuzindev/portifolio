@@ -72,11 +72,11 @@ const Tech_figma = styled.img`
 
 
 const ProjImgs = styled.img`
-  max-width: 85%;
+  max-width: 75%;
   max-height: 100%;
   
   @media (max-width: 1400px) {
-    max-width: 70%;
+    max-width: 65%;
 }
 @media (max-width: 900px) {
      max-width: 100%;

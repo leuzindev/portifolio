@@ -179,7 +179,8 @@ const Download_area = styled.div`
    
 `
 
-const Button_Download = styled.button`
+const Button_Download = styled.a`
+    text-decoration: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -224,7 +225,8 @@ const Img_link = styled.img`
 const Img_github = styled.img`
      width: 40px;
 `
-const Redes = styled.div`
+const Redes = styled.a`
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,14 +327,14 @@ export const Apresentation = () => {
                     <Block_dw_links>
 
                         <Download_area>
-                            <Button_Download>Baixar Currículo <Icon_baixar src={Download} /></Button_Download>
+                            <Button_Download href='./cv_leonardo.pdf' download="Cv_Leonardo.pdf">Baixar Currículo <Icon_baixar src={Download} /></Button_Download>
                         </Download_area>
                         <Area_Redes>
-                            <Redes>
+                            <Redes href='https://github.com/leuzindev'>
                                 <Img_github src={Github} />
                                 <Lbl>Github</Lbl>
                             </Redes>
-                            <Redes>
+                            <Redes href='https://www.linkedin.com/in/leonardodevs/'>
                                 <Img_link src={Linkedin} />
                                 <Lbl>LinkedIn</Lbl>
                             </Redes>

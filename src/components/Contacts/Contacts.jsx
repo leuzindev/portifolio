@@ -18,12 +18,22 @@ const Screen = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 900px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
 `
 
 const LeftCard = styled.div`
   
   height: 70%;
   width: 40%;
+  @media (max-width: 900px) {
+    width: 100%;
+    height: 60%;
+  }
 `
 
 const RightCard = styled.div`
@@ -32,6 +42,10 @@ const RightCard = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    height: 40%;
+    width: 100%;
+  }
 `
 
 const ContactAnimation = styled.img`
@@ -52,12 +66,26 @@ const Titulo = styled.h1`
   @media (max-width: 1400px) {
     margin-bottom: 50px;
 }
+  @media (max-width: 900px) {
+    font-size: 32pt;
+    margin-bottom: 0px;
+  }
   
 `
 const CorpoContato = styled.div`
    
   width: 100%;
   height: 80%;
+  
+  @media (max-width: 900px) {
+    height: 62%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+
+  }
 
  
 `
@@ -75,6 +103,10 @@ const LblContacts = styled.p`
     border-color: #FF0000;
     cursor: pointer;
   }
+  @media (max-width: 900px) {
+
+    font-size: 15px;
+  }
 `
 
 const BlocoImg = styled.div`
@@ -88,6 +120,10 @@ const BlocoImg = styled.div`
 `
 const ContactImg = styled.img`
  margin-left: 20px;
+  @media (max-width: 900px) {
+
+  width: 45px;
+  }
 `
 export const Contacts = () => {
   return (

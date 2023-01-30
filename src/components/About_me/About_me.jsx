@@ -22,6 +22,11 @@ const Me = styled.h1`
     line-height: 43px;
 
   }
+  @media (max-width: 900px) {
+    font-size: 20px;
+    line-height: 30px;
+
+  }
 `
 
 const Area_me = styled.div`
@@ -48,7 +53,9 @@ const Block_Carrosel = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  @media (max-width: 900px) {
+    height: 60%;
+  }
 `
 
 const Swiper = styled.div`

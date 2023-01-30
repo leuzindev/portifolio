@@ -14,6 +14,10 @@ import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 
+import habits0 from '/habits0.png'
+import habits1 from '/habits1.png'
+import habits2 from '/habits2.png'
+
 import lorem1 from '/lorem1.png'
 import lorem2 from '/lorem2.png'
 
@@ -48,7 +52,10 @@ const Tech = styled.img`
   @media (max-width: 1400px) {
       width: 120px;
 }
-
+@media (max-width: 900px) {
+       
+   width: 60px;
+}
 `
 
 const Tech_figma = styled.img`
@@ -56,7 +63,10 @@ const Tech_figma = styled.img`
   @media (max-width: 1400px) {
       width: 70px;
 }
-
+@media (max-width: 900px) {
+       
+       width: 30px;
+    }
 `
 
 
@@ -64,10 +74,14 @@ const Tech_figma = styled.img`
 const ProjImgs = styled.img`
   max-width: 85%;
   max-height: 100%;
+  
   @media (max-width: 1400px) {
     max-width: 70%;
 }
-
+@media (max-width: 900px) {
+     max-width: 100%;
+    
+}
 `
 
 
@@ -76,15 +90,22 @@ const Screen = styled.div`
     width: 100%;
     height: 120vh;
     text-align: center;
+    
     background-image: url('/bg_project.png'); 
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    @media (max-width: 900px) {
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 `
 const AreaDesc = styled.div`
-
+  
   height: 30%;
   width: 100%;
 `
@@ -94,7 +115,7 @@ const AreaInfo = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-
+  
   align-items: center;
   flex-direction: column;
 `
@@ -124,13 +145,18 @@ const Bloco_titulo = styled.div`
   height: 20%;
 `
 const Bloco_info = styled.div`
- 
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
   height: 100%;
+   @media (max-width: 900px) {
+    width: 100%;  
+    flex-direction: column;
+
+}
 `
 const ContainerInfo = styled.div`
   
@@ -139,6 +165,10 @@ const ContainerInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    height: 200%;
+  }
 `
 
 const Bloco_tech = styled.div`
@@ -148,6 +178,12 @@ const Bloco_tech = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width: 900px) {
+    width: 100%;  
+    flex-direction: column;
+
+}
 `
 const Container_desc = styled.div`
   
@@ -156,13 +192,25 @@ const Container_desc = styled.div`
   align-items: flex-start;
   flex-direction: column;
   height: 50%;
+  @media (max-width: 900px) {
+
+    height: 100%;
+}
 `
+
+const InfoTitle = styled(Infos)`
+  width: 50%;
+  list-style: none;
+`
+
+
 export const Projects = () => {
 
-  const [currentImage, setCurrentImage] = useState(1);
+  const [currentImage, setCurrentImage] = useState(0);
 
   const handleChange = (index) => {
     setCurrentImage(index)
+    console.log(currentImage)
   }
 
 
@@ -185,6 +233,15 @@ export const Projects = () => {
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
+        <SwiperSlide>
+          <ProjImgs src={habits0} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjImgs src={habits1} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProjImgs src={habits2} />
+        </SwiperSlide>
         <SwiperSlide>
           <ProjImgs src={connect1} />
         </SwiperSlide>
@@ -212,74 +269,107 @@ export const Projects = () => {
         {currentImage < 3 && (
           <AreaInfo id='connect-info'>
             <Bloco_titulo>
-              <NomeProjeto>Connect Bank</NomeProjeto>
+              <NomeProjeto>Habits</NomeProjeto>
             </Bloco_titulo>
+            <InfoTitle>O aplicativo apresenta um quadro diário que mostra a frequência dos hábitos praticados, permitindo que você veja sua progresso ao longo do tempo e se motive a seguir em frente.</InfoTitle>
             <ContainerInfo>
               <Bloco_info>
                 <Container_desc>
-                <Infos>Um Banco digital focado na experiência do usuário</Infos>
-                <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
-                <Infos>Sistema de Login com JWT</Infos>
-                <Infos>Hash de senha de usuário</Infos>
-                <Infos>Rotas protegidas</Infos>
+                  <Infos>Aplicação de ponta a ponta</Infos>
+                  <Infos>Backend </Infos>
+                  <Infos>Versão Mobile</Infos>
+                  <Infos>Api</Infos>
+
                 </Container_desc>
               </Bloco_info>
               <Bloco_tech>
-                <Tech src={python}/>
-                <Tech src={reactjs}/>
-                <Tech src={mysql}/>
-                <Tech src={django}/>
-                
+                <Tech src={typescript} />
+                <Tech src={reactjs} />
+                <Tech src={figma} />
+                <Tech src={node} />
+                <Tech src={prisma} />
+
               </Bloco_tech>
 
             </ContainerInfo>
           </AreaInfo>
         )}
-        {(currentImage === 3 || currentImage === 4) && (
-          <AreaInfo id='hzc-info'>
-             <Bloco_titulo>
-            <NomeProjeto>Hzc App</NomeProjeto>
-             </Bloco_titulo>
-             <ContainerInfo>
-             <Bloco_info>
-              <Container_desc>
-              <Infos>Uma página sobre skate</Infos>
-              <Infos>Flex box e Grid layout</Infos>
-              <Infos>Responsívo</Infos>
-              <Infos>Mobile first</Infos>
-              </Container_desc>
-            </Bloco_info>
-            <Bloco_tech>
-            <Tech src={html}/>
-              <Tech src={css}/>
-              <Tech src={javascript}/>
-              <Tech_figma src={figma}/>
-            </Bloco_tech>
+        {currentImage >= 3 && currentImage < 6 &&  (
+          <AreaInfo id='connect-info'>
+            <Bloco_titulo>
+              <NomeProjeto>Connect Bank</NomeProjeto>
+            </Bloco_titulo>
+            <InfoTitle>Um Banco digital focado na experiência do usuário com opção de pode fazer pix para outras contas</InfoTitle>
+
+            <ContainerInfo>
+              <Bloco_info>
+                <Container_desc>
+                  <Infos>Uma API própria para Autenticação e transação de Pix</Infos>
+                  <Infos>Sistema de Login com JWT</Infos>
+                  <Infos>Hash de senha de usuário</Infos>
+                  <Infos>Rotas protegidas</Infos>
+                </Container_desc>
+              </Bloco_info>
+              <Bloco_tech>
+                <Tech src={python} />
+                <Tech src={reactjs} />
+                <Tech src={mysql} />
+                <Tech src={django} />
+
+              </Bloco_tech>
 
             </ContainerInfo>
           </AreaInfo>
         )}
-        {(currentImage === 5 || currentImage === 6) && (
+        {currentImage >= 6 && currentImage <= 7 &&  (
+          <AreaInfo id='hzc-info'>
+            <Bloco_titulo>
+              <NomeProjeto>Hzc App</NomeProjeto>
+            </Bloco_titulo>
+            <InfoTitle>Uma página sobre skate criado para particar meu conhecimentos em Flex box e Grid Layout</InfoTitle>
+
+            <ContainerInfo>
+              <Bloco_info>
+                <Container_desc>
+                 
+                  <Infos>Flex box e Grid layout</Infos>
+                  <Infos>Responsívo</Infos>
+                  <Infos>Mobile first</Infos>
+                </Container_desc>
+              </Bloco_info>
+              <Bloco_tech>
+                <Tech src={html} />
+                <Tech src={css} />
+                <Tech src={javascript} />
+                <Tech_figma src={figma} />
+              </Bloco_tech>
+
+            </ContainerInfo>
+          </AreaInfo>
+        )}
+        {(currentImage > 7) && (
           <AreaInfo id='lorem-info'>
-             <Bloco_titulo>
-            <NomeProjeto>Lorem Barber</NomeProjeto>
-             </Bloco_titulo>
-             <ContainerInfo>
-             <Bloco_info>
-             <Container_desc>
-              <Infos>Um site para uma Barbearia moderna</Infos>
-              <Infos>Carrosel de Imagens</Infos>
-              <Infos>Styled Components</Infos>
-              <Infos>Prototipado no figma</Infos>
-              </Container_desc>
-            </Bloco_info>
-            <Bloco_tech>
-              <Tech src={reactjs}/>
-              <Tech_figma src={figma}/>
-              <Tech src={javascript}/>
-              
-        
-            </Bloco_tech>
+            <Bloco_titulo>
+              <NomeProjeto>Lorem Barber</NomeProjeto>
+            </Bloco_titulo>
+            <InfoTitle>Um Site de baberia em react com planos e carrosel de imagens</InfoTitle>
+
+            <ContainerInfo>
+              <Bloco_info>
+                <Container_desc>
+                  <Infos>Um site para uma Barbearia moderna</Infos>
+                  <Infos>Carrosel de Imagens</Infos>
+                  <Infos>Styled Components</Infos>
+                  <Infos>Prototipado no figma</Infos>
+                </Container_desc>
+              </Bloco_info>
+              <Bloco_tech>
+                <Tech src={reactjs} />
+                <Tech_figma src={figma} />
+                <Tech src={javascript} />
+
+
+              </Bloco_tech>
             </ContainerInfo>
           </AreaInfo>
         )}

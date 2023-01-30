@@ -25,3 +25,12 @@
         margin-top: 1px;
     }
   }
+
+@media (max-width: 900px) {
+    .about{
+        font-size: 30px;
+    }
+    .title{
+        font-size: 30px;
+    }
+  }

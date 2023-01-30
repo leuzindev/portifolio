@@ -285,9 +285,8 @@ export const Projects = () => {
               <Bloco_tech>
                 <Tech src={typescript} />
                 <Tech src={reactjs} />
-                <Tech src={figma} />
                 <Tech src={node} />
-                <Tech src={prisma} />
+                <Tech_figma src={figma} />
 
               </Bloco_tech>
 

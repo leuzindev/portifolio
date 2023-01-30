@@ -252,12 +252,16 @@ const Redes = styled.a`
     padding-bottom:10px;
     cursor: pointer;
     
-  
+
     &:hover{
         transition: 1s all;
-        border-bottom: 2px solid #FF0000;
+       
         
     }
+    @media (max-width: 1700px) {
+     
+   
+  }
     @media (max-width: 900px) {
        margin: 10px;
    
@@ -269,7 +273,7 @@ const Lbl = styled.h1`
     color: white;
     margin-left: 20px;
     font-family: 'Kulim Park', sans-serif;
-     width: 40px;
+
     @media (max-width: 1400px) {
         font-size: 20px;
   }

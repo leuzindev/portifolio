@@ -13,6 +13,10 @@ const LblFooter = styled.h1`
   font-family: 'Judson';
   color: white;
   font-size: 15pt;
+  @media (max-width: 1400px) {
+
+  font-size: 14px;
+}
 `
 const LogoFooter = styled.img`
   margin-left: 10px;

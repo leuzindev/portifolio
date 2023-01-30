@@ -151,7 +151,9 @@ const Button_Project = styled.a`
     }
      @media (max-width: 1400px) {
         margin-top: 10px;
-   
+        width: 15%;
+        height: 40px;
+        font-size: 20px;
   }
   @media (max-width: 900px) {
         width: 200px
@@ -197,6 +199,12 @@ const Button_Download = styled.a`
         transition: 1s all;
         border: 2px solid #FF0000;
     }
+    @media (max-width: 1400px) {
+
+        width: 30%;
+        font-size: 20px;
+        height: 60px;
+  }
     @media (max-width: 900px) {
         width: 300px;
         font-size: 20px;
@@ -220,10 +228,19 @@ const Area_Redes = styled.div`
 
 const Img_link = styled.img`
     width: 40px;
+    @media (max-width: 1400px) {
+
+        width: 30px;
+  }
 `
 
 const Img_github = styled.img`
      width: 40px;
+      width: 40px;
+    @media (max-width: 1400px) {
+
+        width: 30px;
+  }
 `
 const Redes = styled.a`
     text-decoration: none;
@@ -234,6 +251,8 @@ const Redes = styled.a`
     transition: 1s all;
     padding-bottom:10px;
     cursor: pointer;
+    
+  
     &:hover{
         transition: 1s all;
         border-bottom: 2px solid #FF0000;
@@ -250,6 +269,10 @@ const Lbl = styled.h1`
     color: white;
     margin-left: 20px;
     font-family: 'Kulim Park', sans-serif;
+     width: 40px;
+    @media (max-width: 1400px) {
+        font-size: 20px;
+  }
 `
 
 const Block_dw_links = styled.div`

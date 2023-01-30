@@ -50,6 +50,15 @@ const RightCard = styled.div`
 
 const ContactAnimation = styled.img`
   width: 80%;
+  
+  @media (max-width: 1400px) {
+
+    width: 60%;
+  }
+  @media (max-width: 900px) {
+
+    width: 70%;
+  }
 `
 
 const AreaTitulo = styled.div`
@@ -64,6 +73,7 @@ const Titulo = styled.h1`
   color: white;
   font-size: 72pt;
   @media (max-width: 1400px) {
+    font-size: 50px;
     margin-bottom: 50px;
 }
   @media (max-width: 900px) {
@@ -103,6 +113,10 @@ const LblContacts = styled.p`
     border-color: #FF0000;
     cursor: pointer;
   }
+  @media (max-width: 1400px) {
+
+    font-size: 20px;
+  }
   @media (max-width: 900px) {
 
     font-size: 15px;
@@ -120,6 +134,9 @@ const BlocoImg = styled.div`
 `
 const ContactImg = styled.img`
  margin-left: 20px;
+ @media (max-width: 1400px) {
+    width: 40px !important;
+  }
   @media (max-width: 900px) {
 
   width: 45px;

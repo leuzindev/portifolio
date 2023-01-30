@@ -84,7 +84,7 @@ class Carrosel extends Component{
         <div className="carrosel" style={{ width: 300, height: 300 }}><img src={mongodb} /></div>
         <div className="carrosel" style={{ width: 300, height: 300 }}><img src={postgres} /></div>
         <div className="carrosel" style={{ width: 300, height: 300 }}><img src={prisma} /></div>
-        <div className="carrosel" style={{ width: 300, height: 300 }}><img src={figma} /></div>
+        <div className="carrosel" style={{ width: 300, height: 300 }}><img className="figma" src={figma} /></div>
         
       
       </Carousel>

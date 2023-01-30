@@ -7,8 +7,14 @@
 }
 
 @media (max-width: 1400px) {
+    .figma{
+        width: 100px !important;
+    }
     .carrosel{
-        width: 250px !important;
+        width: 200px !important;
+    }
+    .carrosel > img {
+        width: 150px ;
     }
 }
 

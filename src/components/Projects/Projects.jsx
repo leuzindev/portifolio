@@ -122,9 +122,13 @@ const AreaInfo = styled.div`
 
 
 const NomeProjeto = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'MuseoModerno';
   font-size: 25pt;
   color: white;
+  height: 70px;
 `
 
 const Infos = styled.li`
@@ -142,7 +146,7 @@ const Bloco_titulo = styled.div`
   justify-content: center;
   align-items: center;
  
-  height: 20%;
+  height: 30%;
 `
 const Bloco_info = styled.div`
 
@@ -210,7 +214,6 @@ export const Projects = () => {
 
   const handleChange = (index) => {
     setCurrentImage(index)
-    console.log(currentImage)
   }
 
 
